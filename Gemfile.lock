@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    hubspot_event (0.1.0)
+    hubspot_event (0.2.0)
       hubspot-ruby
 
 GEM
@@ -17,7 +17,7 @@ GEM
     httparty (0.17.0)
       mime-types (~> 3.0)
       multi_xml (>= 0.5.2)
-    hubspot-ruby (0.7.0)
+    hubspot-ruby (0.8.1)
       activesupport (>= 3.0.0)
       httparty (>= 0.10.0)
     i18n (1.6.0)
@@ -49,7 +49,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  bundler (~> 1.17)
+  bundler (~> 1.16)
   hubspot_event!
   rake (~> 10.0)
   rspec (~> 3.0)
