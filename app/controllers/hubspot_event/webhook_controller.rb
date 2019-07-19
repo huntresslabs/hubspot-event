@@ -9,7 +9,7 @@ module HubspotEvent
     rescue_from SignatureVerificationError, with: :bad_request
 
     def event
-      webhook_params.each do |event|
+      webhook_params.sort_by { |e| e["occurredAt"] }.each do |event|
         # Convert the strong parameters to a hash. This is OK because we're already
         # verified the payload came from Hubspot and each event type has a unique
         # set of parameters
