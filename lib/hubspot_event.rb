@@ -21,12 +21,12 @@ module HubspotEvent
       backend.instrument(namespace.call(event["subscriptionType"]), event) if event
     end
 
-    def subscribe(name, callable = Proc.new)
+    def subscribe(name, &callable)
       backend.subscribe(namespace.to_regexp(name), adapter.call(callable))
     end
 
-    def all(callable = Proc.new)
-      subscribe nil, callable
+    def all(&callable)
+      subscribe nil, &callable
     end
   end
 
